@@ -1,16 +1,28 @@
-
-
-
 <div class="text-layout">
-
   <h3>Hola mundo..</h3>
-  <h1>{{_name | titlecase}}</h1>
-  <h1>{{_numerico | number}}</h1>
-  <h1>{{_obj| json}}</h1>
-
+  <h1>{{ _name | titlecase }}</h1>
+  <h1>{{ _numerico | number }}</h1>
+  <h1>{{ _obj | json }}</h1>
 </div>
 
-<button pButton (click)="mostrarNombre()" label="Cambiar nombre">
+<button 
+pButton 
+icon="pi pi-bell" 
+class="p-button-help" 
+iconPos="right" 
+(click)="mostrarNombre()" 
+label="Cambiar nombre">
 
 </button>
- 
+
+<p-card>
+  <ng-template pTemplate="header">
+   {{_name | titlecase}}
+</ng-template>
+Body Content
+
+<ng-template pTemplate="footer">
+  Footer content here
+</ng-template>
+</p-card>
+
