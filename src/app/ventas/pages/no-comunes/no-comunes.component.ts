@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class NoComunesComponent  {
+export class NoComunesComponent implements OnInit  {
 
   constructor() { }
 
