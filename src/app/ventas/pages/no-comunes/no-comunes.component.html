@@ -7,11 +7,19 @@
     </p>
 </div>
 
+
+<!--Se utiliza el fieldSet y se  utiliza la propiedad [toggleable]="true" para que se contraiga y encoja-->
 <div class="grid">
-    <div class="col md-6 sm-9">
-        <p-fieldset legend="Header">
+    <div class="col md-6">
+        <p-fieldset legend="Header" [toggleable]="true">
             Content
         </p-fieldset>
     </div>
+    <div class="col md-6">
+        <p-fieldset legend="Header" [toggleable]="true">
+            Content
+        </p-fieldset>
+    </div>
+
 
 </div>
