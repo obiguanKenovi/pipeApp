@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -49,7 +50,43 @@ export class NoComunesComponent implements OnInit  {
       if(this.clientes.length>0)
       {
         this.clientes.pop();
-      }     
+      }             
   }
+
+   //keyValue pipe.
+  persona={
+    name:'Jose',
+    edad:40,
+    direccion:'Martin cortes'
+  }
+
+  //json pipe
+  heroes=[
+    {
+    name:'Superman',
+    vuela:true
+    },
+    {
+      name:'Batman',
+      vuela:false
+    },
+    {
+      name:'Fantasmagorico',
+      vuela:true
+    },
+  ]
+
+  //Async pipe.
+
+  miObservable=interval(1000); //Emitira diferentes valores 0,1,2,3,4,
+
+ valorPromesa=new Promise((resolve,reject)=>{
+
+  setTimeout(()=>{
+    resolve( 'Tenemos data de promesa' )
+  },3500);
+  
+ })
+
 
 }
