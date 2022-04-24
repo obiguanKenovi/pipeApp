@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 })
 export class OrdenarComponent  {
 
+  public _flag:boolean=false;
+
   constructor() { }
 
- 
+  cambiarBoolean(){
+    
+    return this._flag= !this._flag;
+   
+  }
 
 }
