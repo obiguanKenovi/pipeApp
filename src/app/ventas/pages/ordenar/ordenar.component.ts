@@ -10,6 +10,8 @@ import { Color, Heroe } from '../../interfaces/ventas.intrface';
 export class OrdenarComponent  {
 
   public _flag:boolean=false;
+
+  public _ordenarPor:string='';
   public _horoes:Heroe[]=[
     {
       nombre:'Supermar',
@@ -44,6 +46,10 @@ export class OrdenarComponent  {
 
     return this._flag= !this._flag;
    
+  }
+
+  cambiarOrder(valor:string){
+    this._ordenarPor = valor;
   }
 
 }
