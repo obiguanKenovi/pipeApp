@@ -1,0 +1,66 @@
+
+
+
+<div class="text-layout">
+    <h1>DecimalPipe y Porcentajes</h1>
+
+    <p>
+        Pipes incluidos en Angular -Usualmente en el Common Module.
+    </p>
+</div>
+
+<!--Configuración basada en el PrimeFlex, a partir de la varsion 3 no se usa la p.-->
+
+<div class="grid">
+<div class="col-4">
+    <p-card header="Ventas Netas"
+    subheader="del presente año">
+    Valor real: {{ ventasNetas }}
+    <br>
+   Valor filtrado usando el pipe number :  
+   <i class="pi pi-dollar"> {{ventasNetas | number}}</i> <br>
+   <strong>Filtro utilizado: ventasNetas | number:'1.1-1'</strong><br>
+   <i class="pi pi-dollar"> {{ventasNetas | number:'1.1-1'}}</i><br>
+    </p-card>
+
+</div>
+
+<div class="col-4">
+    <p-card header="Ventas Brutas"
+    subheader="del presente año">
+    Valor real: {{ ventasNetas }}
+    <br>
+   Valor filtrado usando el pipe currency :  
+   <i > {{ventasNetas +2000000 | currency}}</i> <br>
+   Valor filtrado usando ventasNetas +2000000 | currency:'Bs.'<br>
+   <i > {{ventasNetas +2000000 | currency:'Bs.'}}</i> <br>
+   valor del filtro: ventasNetas +2000000 | currency:'Bs.':'symbol-narrow':'1.0-4' <br>
+   <i > {{ventasNetas +2000000 | currency:'Bs.':'symbol-narrow':'1.0-4'}}</i>
+  
+    </p-card>
+
+</div>
+
+<div class="col-4">
+    <p-card header="Ganancia porcentual"
+    subheader="del presente año">
+    Valor real: {{ porcentaje }}
+    <br>
+   Valor filtrado usando el pipe percent :<br>  
+   <i > {{porcentaje | percent}}</i> <br>
+   Valor filtrado usando porcentaje | percent:'2.2-2'<br>
+   <i > {{porcentaje | percent:'2.2-2'}}</i> <br>
+   <!-- Valor filtrado usando ventasNetas +2000000 | currency:'Bs.'<br>
+   <i > {{ventasNetas +2000000 | currency:'Bs.'}}</i> <br>
+   valor del filtro: ventasNetas +2000000 | currency:'Bs.':'symbol-narrow':'1.0-4' <br>
+   <i > {{ventasNetas +2000000 | currency:'Bs.':'symbol-narrow':'1.0-4'}}</i> -->
+  
+    </p-card>
+
+</div>
+</div>
+
+<!--Fin configuración basada en el PrimeFlex-->
+
+
+<!-- porcentaje -->
